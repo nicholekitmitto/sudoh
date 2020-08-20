@@ -11,9 +11,10 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1
         style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
+          ...scale(1),
+          marginLeft: rhythm(1),
+          marginTop: ".25em",
+          fontFamily: "'Poppins', sans-serif",
         }}
       >
         <Link
@@ -23,7 +24,29 @@ const Layout = ({ location, title, children }) => {
           }}
           to={`/`}
         >
-          {title}
+          <div class="titleWrapper">
+            <p class="glitch">
+              <span>S</span>
+              <span>u</span>
+              <span>d</span>
+              <span>o</span>
+              <span>h</span>
+            </p>
+            <p class="glitch_fixed">
+              <span>S</span>
+              <span>u</span>
+              <span>d</span>
+              <span>o</span>
+              <span>h</span>
+            </p>
+            <p class="glitch_opacity">
+              <span>S</span>
+              <span>u</span>
+              <span>d</span>
+              <span>o</span>
+              <span>h</span>
+            </p>
+          </div>
         </Link>
       </h1>
     )
@@ -31,8 +54,10 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h3
         style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
+          ...scale(1),
+          marginLeft: rhythm(1),
+          marginTop: ".25em",
+          fontFamily: "'Poppins', sans-serif",
         }}
       >
         <Link
@@ -42,27 +67,54 @@ const Layout = ({ location, title, children }) => {
           }}
           to={`/`}
         >
-          {title}
+          <div class="titleWrapper">
+            <p class="glitch">
+              <span>S</span>
+              <span>u</span>
+              <span>d</span>
+              <span>o</span>
+              <span>h</span>
+            </p>
+            <p class="glitch_fixed">
+              <span>S</span>
+              <span>u</span>
+              <span>d</span>
+              <span>o</span>
+              <span>h</span>
+            </p>
+            <p class="glitch_opacity">
+              <span>S</span>
+              <span>u</span>
+              <span>d</span>
+              <span>o</span>
+              <span>h</span>
+            </p>
+          </div>
         </Link>
       </h3>
     )
   }
   return (
-    <div
+    <div>
+      <header>{header}</header>
+      <div
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
+        maxWidth: "100%",
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header>{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      }}>
+        <main
+        style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(24),
+          minHeight: "85vh",
+        }}>{children}</main>
+        <footer>
+          <p>© {new Date().getFullYear()}, Built with ❤️️</p>
+        </footer>
+      </div>
     </div>
   )
 }

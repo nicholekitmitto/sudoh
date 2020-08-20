@@ -3,6 +3,9 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import Background from "../components/background"
+import Planetleft from "../components/planetleft"
+import Planetright from "../components/planetright"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -12,6 +15,9 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Planetleft />
+      <Planetright />
+      <Background />
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
