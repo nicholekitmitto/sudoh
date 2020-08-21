@@ -105,13 +105,14 @@ const Layout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}>
         <main
+        className="contentWrapper"
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(30),
           minHeight: "85vh",
         }}>{children}</main>
-        <footer>
+        <footer className="page-footer">
           <p>© {new Date().getFullYear()}, Built with ❤️️</p>
         </footer>
       </div>
