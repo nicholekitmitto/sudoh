@@ -5,7 +5,7 @@ module.exports = {
       name: `Nichole Dwight`,
       summary: `Just a front-end dev lost in the infosec world.`,
     },
-    description: `A tech blog for newbies like me`,
+    description: `A tech blog for newbies like me, I write about the things I spend too long googling`,
     siteUrl: `https://nichole.is`,
     social: {
       twitter: `sudohinbeta`,
@@ -66,7 +66,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -78,6 +78,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

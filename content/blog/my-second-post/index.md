@@ -1,6 +1,7 @@
 ---
 title: Deleting commented out lines of CSS and other code with sed!
 date: "2020-08-21T23:46:37.121Z"
+description: "How to delete commented lines in css using sed"
 ---
 
 You don't often find front-end developers using Linux commands for their everyday tasks, but whatever gets the job done the fastest, right?!

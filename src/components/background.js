@@ -1,7 +1,5 @@
 import React from "react"
 
-import { rhythm, scale } from "../utils/typography"
-
 const Background = () => {
     return (
       <div
@@ -12,7 +10,6 @@ const Background = () => {
           width: "300px",
           height: "350px",
           overflow: "hidden",
-          zIndex: -1,
         }}>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="400" height="400" className="static">
                 <defs>
