@@ -88,7 +88,9 @@ Once installed, you'll need to run `aws configure` to get it setup and connected
 <span class="ps1">></span>
 </div>
 
-**Before you execute this next command!** please note that you're uploading a Gatsby project, we don't want to include files such as your node_modules and .git files! So we'll only point directly to your public folder. You could go about this in a few other ways if you want to upload various other files, you could use `--include` or even `--exclude=.git`. If you're wondering what I was, yes you can use multiple `--exclude` arguments. 
+**Before you execute this next command!** please note that you're uploading a Gatsby project, we don't want to include files such as your node_modules and .git files! So we'll only point directly to your public folder. You could go about this in a few other ways if you want to upload various other files, you could use `--include` or even `--exclude=.git`. If you're wondering what I was, yes you can use multiple `--exclude` arguments.
+
+You'll also want to make use of the `--acl` option, this stands for access control list. By using `--acl public`, you'll automatically set all files being uploaded to public, this way visitors to your site will be able to access your content.
 
 Now it's time to upload the files, you'll want to execute the following command:
 
@@ -96,15 +98,12 @@ Now it's time to upload the files, you'll want to execute the following command:
 <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
 
 <pre class="result">
-aws s3 sync {YOUR-LOCAL-PATH-TO-FOLDER} s3://{{YOUR-BUCKET-NAME}
+aws s3 sync {YOUR-LOCAL-PATH-TO-FOLDER} s3://{{YOUR-BUCKET-NAME} --acl public-read
 </pre>
 </div>
 
-Depending on your system, you may need to wrap your local path in quotes. In my instance this command looked like `aws s3 sync ~/projects/gatsby-blog/public s3://mybucketname`.
+Depending on your system, you may need to wrap your local path in quotes. In my instance this command looked like `aws s3 sync ~/projects/gatsby-blog/public s3://mybucketname --acl public-read`.
 
-Refresh your S3 bucket to make sure your files uploaded successfully, next you'll want to select all files -> actions -> make public. 
-
-![Make all files public](./makeAllPublic.png)
 
 ## 3. DNS
 
