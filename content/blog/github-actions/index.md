@@ -73,10 +73,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x, 14.x]
-
     steps:
       - name: Git clone our repo
         uses: actions/checkout@v2
