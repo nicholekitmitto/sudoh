@@ -116,4 +116,9 @@ Don't you worry! Let's take a moment to head back to your Github repo, under **s
 
 Now that those are defined, your script will be able to reference that information *without* exposing your confidential credentials to the rest of the intertubes! You should also notice that under the *deploy* step, we've added the argument `--acl public-read`, you'll recognize this if you followed my last post on AWS deployment. This is to ensure all the content you upload to your S3 bucket is accessible to the visitors of your site, we used it alongside the AWS CLI command `aws s3 sync` before.
 
+
 You should now be able to push your complete workflow file back up to your repo and watch the magic happen from the Actions tab! Woop, woop!
+
+![Errors along the way](./actionsErrors.png)
+
+Hopefully you won't be like me and have a lot of errors along the way, various things like typos in version references, variables, etc. There are multiple ways to go about deploying to AWS S3 via Github Actions, this is just one example.
