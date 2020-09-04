@@ -43,13 +43,13 @@ class Bio extends Component {
                             </h4>
                             <p className="last">In Progress</p>
 
-                            <div className="dot" style={{gridRow: 4,}}></div>
+                            <div className="dot" style={{gridRow: 3,}}></div>
                             <h4 className="title">
                                 LPIC-1
                             </h4>
                             <p className="last">In Progress</p>
 
-                            <div className="dot" style={{gridRow: 8,}}></div>
+                            <div className="dot" style={{gridRow: 5,}}></div>
                             <h4 className="title">
                                 University of the <br/>West of England
                             </h4>
