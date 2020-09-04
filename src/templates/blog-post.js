@@ -1,11 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import Header from "../components/header"
 import Layout from "../components/layout"
 import Background from "../components/background"
 import Planetleft from "../components/planetleft"
 import Planetright from "../components/planetright"
+import Border from "../components/mobileborder"
+import Hero from "../components/hero"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
@@ -16,9 +18,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <div>
+      <Border />
       <Planetleft />
       <Planetright />
       <Background />
+      <Hero />
+      <Header />
       <Layout location={location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
@@ -50,9 +55,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           />
-          <footer>
-            <Bio />
-          </footer>
         </article>
 
         <nav>
@@ -82,6 +84,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </ul>
         </nav>
       </Layout>
+      <footer className="page-footer">
+        <p>© {new Date().getFullYear()}, Built with ❤️️</p>
+      </footer>
     </div>
   )
 }

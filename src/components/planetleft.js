@@ -18,7 +18,7 @@ const Planetleft = () => {
                     <stop stopColor="#3e0e48" stopOpacity="1" offset="100%"></stop>
                 </linearGradient>
                 <path d="" id="a3lKkBlH00"></path>
-            </defs><g><g><g><use href="#k4YcsNOMt" opacity="1" fill="url(#gradienta5W7EZjUv)"></use></g><g><g><use href="#a3lKkBlH00" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="1"></use></g></g></g></g></svg>
+            </defs><g><g><g><use href="#k4YcsNOMt" opacity="1" fill="url(#gradienta5W7EZjUv)"></use></g><g><g><use href="#a3lKkBlH00" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="1"></use></g></g></g></g></svg>
     )
 }
 

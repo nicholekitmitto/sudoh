@@ -9,7 +9,7 @@ const Planetright = () => {
         //             <stop stopColor="#ff3366" stopOpacity="1" offset="0%"></stop>
         //             <stop stopColor="#3e0e48" stopOpacity="1" offset="100%"></stop>
         //         </linearGradient>
-        //     </defs><g><g><g><g><use href="#bx3UI6ZkX" opacity="1" fillOpacity="0" stroke="#000000" stroke-width="1" stroke-opacity="1"></use></g></g><g><use href="#f18MiIA9I2" opacity="1" fill="url(#gradientbgtzWyCSH)"></use></g></g></g></svg>
+        //     </defs><g><g><g><g><use href="#bx3UI6ZkX" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="1"></use></g></g><g><use href="#f18MiIA9I2" opacity="1" fill="url(#gradientbgtzWyCSH)"></use></g></g></g></svg>
 
 
         
@@ -19,7 +19,7 @@ const Planetright = () => {
                 <stop stopColor="#f63165" stopOpacity="1" offset="0%"></stop>
                 <stop stopColor="#3e0e48" stopOpacity="1" offset="100%"></stop>
             </linearGradient>
-            </defs><g><g><g><g><use href="#a3lKkBlH00" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="1"></use></g></g><g><use href="#c32if6naDO" opacity="1" fill="url(#gradientc2rCaqWC2i)"></use></g></g></g></svg>
+            </defs><g><g><g><g><use href="#a3lKkBlH00" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="1"></use></g></g><g><use href="#c32if6naDO" opacity="1" fill="url(#gradientc2rCaqWC2i)"></use></g></g></g></svg>
     )
 }
 

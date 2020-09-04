@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 
 body {
     background: #252835;
     color: #FFF;
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Fira Code', 'Poppins', sans-serif !important;
 }
 
 p {
@@ -19,7 +20,7 @@ h3 {
 p, h1, h2, h3, h4, img {
     position: relative;
 
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Fira Code', 'Poppins', sans-serif !important;
 }
 
 .gatsby-image-wrapper img {
@@ -288,6 +289,7 @@ body  {
     position: absolute;
     right: 5em;
     z-index: 0;
+    top: 4em;
 }
 
 blockquote {
@@ -323,7 +325,7 @@ blockquote {
     background-size: 100%; */
     padding-top: 3em;
     position: absolute;
-    /* bottom: 0; */
+    bottom: 0;
     left: 0;
     right: 0;
     padding: 0 2em;
@@ -332,9 +334,11 @@ blockquote {
 .page-footer p {
     background: #791C5B;
     border: 1px solid #EE50AA;
-    width: 170px;
+    width: 225px;
     text-align: center;
     border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
 
 ::selection {
@@ -389,3 +393,4 @@ code {
     /* color: #fdfdfd;
     text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 6px #03edf975; */
 }
+
