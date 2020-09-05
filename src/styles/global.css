@@ -368,9 +368,16 @@ code {
 }
 
 .codeblock svg {
-    display: block;
+    display: inline-block;
     margin-bottom: 1em;
     margin-left: -1em;
+    vertical-align: middle;
+}
+
+.codeblock .inline-block {
+    display: inline-block;
+    margin-left: 2em;
+    vertical-align: super;
 }
 
 .ps1 {
@@ -378,6 +385,10 @@ code {
     text-shadow: 0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575; */
     color: #f92aad;
     user-select: none;
+}
+
+.pink {
+    color: #f92aad;
 }
 
 .command {
@@ -390,6 +401,7 @@ code {
     margin-bottom: 0;
     line-height: inherit;
     color: rgb(128, 255, 234) !important;
+    white-space: break-spaces;
     /* color: #fdfdfd;
     text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 6px #03edf975; */
 }
