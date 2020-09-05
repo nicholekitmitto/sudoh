@@ -6,7 +6,7 @@ class Bio extends Component {
     render () {
         return (
             <div className="bio">
-                <h2 className="colorful">$ whoami</h2>
+                <h2 className="colorful whoami">$ whoami</h2>
                 <p>Hiya! I'm Nichole.</p>
                 <p>If this site is broken, just know that it's working on my machine 🙃</p>
                 <p>I'm currently the lead UI Engineer at CollegeNET, working on a class scheduling and event management application for universities nationwide. I've taken up an interest in cybersecurty and am studying for my certificates to be able to move into the field. I'll be writing about the things I learn along my journey <Link to="/blog/" className="colorful">here</Link>, hopefully you may find something useful!</p>

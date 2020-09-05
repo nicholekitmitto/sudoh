@@ -76,6 +76,21 @@ $background: #100e17;
     margin: 5rem auto;
     min-height: 110vh;
 
+    .whoami {
+        &::after {  
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -15px;
+            display: inline-block;
+            background-color: #00ffa3;
+            vertical-align: top;
+            width: 10px;
+            height: 28px;
+            animation: blink 1s step-end infinite;
+          }  
+    }
+
     .info {
         display: flex;
         flex-direction: row;
@@ -182,12 +197,6 @@ $background: #100e17;
         z-index: 5;
         position: relative;
         border-radius: 10px;
-    }
-    
-    @keyframes shift {
-        100% {
-            background-position: -100% 0;
-        }
     }
     
 
@@ -325,6 +334,12 @@ $background: #100e17;
 
 ::-webkit-scrollbar-track {
     background: linear-gradient(90deg,#201c29,#201c29 1px,#100e17 0,#100e17);
+}
+
+@keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
 
 @keyframes wooo {
