@@ -8,7 +8,7 @@ class Bio extends Component {
             <div className="bio">
                 <h2 className="colorful">$ whoami</h2>
                 <p>Hiya! I'm Nichole.</p>
-                <p>If this site is broken, just know that it's working on my machine...</p>
+                <p>If this site is broken, just know that it's working on my machine 🙃</p>
                 <p>I'm currently the lead UI Engineer at CollegeNET, working on a class scheduling and event management application for universities nationwide. I've taken up an interest in cybersecurty and am studying for my certificates to be able to move into the field. I'll be writing about the things I learn along my journey <Link to="/blog/" className="colorful">here</Link>, hopefully you may find something useful!</p>
                 <p>If you want to get in touch with me, buy me a coffee, talk about a potential job opportuntity, - <a href="mailto:nicholedwight@gmail.com" className="colorful">give me a shout</a>!</p>
 
