@@ -199,6 +199,11 @@ $background: #100e17;
         border-radius: 10px;
     }
     
+    @keyframes shift {	
+        100% {	
+            background-position: -100% 0;	
+        }	
+    }
 
     .border,
     .hero-medium {
