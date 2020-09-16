@@ -29,7 +29,14 @@ class Bio extends Component {
                                 Simpleweb
                             </h4>
                             <p>Developer</p>
-                            <p>2015 - 2016</p>
+                            <p className="last">2015 - 2016</p>
+
+                            <div className="dot" style={{gridRow: 7,}}></div>
+                            <h4 className="title">
+                                Picollecta
+                            </h4>
+                            <p>PHP Developer</p>
+                            <p>2014</p>
                         </div>
                     </section>
 
