@@ -353,6 +353,10 @@ code {
     color: #f92aad;
 }
 
+.comment {
+    color: #7970a9;
+}
+
 .command {
     /* color: #f92aad;
     text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3; */
