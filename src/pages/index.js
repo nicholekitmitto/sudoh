@@ -21,7 +21,7 @@ const BlogIndex = ({ data, location }) => {
         <React.Fragment>
           <div>
             <SEO
-                title="Sudoh | hacker in training"
+                title="Sudoh"
               />
             <Border />
             <Planetleft />
