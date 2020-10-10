@@ -68,7 +68,10 @@ class Header extends Component {
               <Link to="/">Home</Link>
             </li>
             <li>
-            <Link to="/blog/">blog</Link>
+            <Link to="/blog/">Blog</Link>
+            </li>
+            <li>
+            <Link to="/codingchallenges/">Challenges</Link>
             </li>
           </ul>
         </nav>      
