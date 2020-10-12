@@ -12,7 +12,12 @@ import Challenge from "../components/challenge"
 import { rhythm } from "../utils/typography"
 import { myContext } from "../components/provider";
 
-const Blog = ({ data, location, question }) => {
+import {
+    Python_insert_five,
+    Python_insert_five_answer
+    } from "../components/pychallengecontent"
+
+const Pychallenges = ({ data, location, question }) => {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
     
@@ -31,6 +36,7 @@ const Blog = ({ data, location, question }) => {
                         <SEO title="Sudoh | Coding Challenges" />
                         <Link to="/pythonchallenges">Python</Link>
                         <Link to="/jschallenges">JavaScript</Link>
+                        <Challenge question={Python_insert_five} answer={Python_insert_five_answer} />
                     </Layout>
                     <footer className="page-footer">
                         <p>© {new Date().getFullYear()}, Built with ❤️️</p>
@@ -59,7 +65,7 @@ const Blog = ({ data, location, question }) => {
 
 }
 
-export default Blog
+export default Pychallenges
 
 export const pageQuery = graphql`
   query {
