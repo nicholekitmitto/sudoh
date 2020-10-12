@@ -29,8 +29,13 @@ const Blog = ({ data, location, question }) => {
                     <Header />
                     <Layout location={location} title={siteTitle}>
                         <SEO title="Sudoh | Coding Challenges" />
-                        <Link to="/pythonchallenges">Python</Link>
-                        <Link to="/jschallenges">JavaScript</Link>
+                        <section>
+                            <h3>This whole section is in development!</h3>
+                            <p>Here you can find a few coding challenges I have either completed, developed, or been asked in an interview.</p>
+                            <p>I think it's a great way to keep up to date with the foundations of programming as well as just challenging yourself every now and then! I'm trying to get better at swapping between Python and JavaScript, I mix up syntax between them a lot. A Leetcode a day, keeps the unemployment away, right?</p>
+                        </section>
+                        <Link to="/pythonchallenges" className="codingLink">Python</Link>
+                        <Link to="/jschallenges" className="codingLink">JavaScript</Link>
                     </Layout>
                     <footer className="page-footer">
                         <p>© {new Date().getFullYear()}, Built with ❤️️</p>

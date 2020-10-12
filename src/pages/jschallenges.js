@@ -34,9 +34,9 @@ const Jschallenges = ({ data, location, question }) => {
                     <Header />
                     <Layout location={location} title={siteTitle}>
                         <SEO title="Sudoh | Coding Challenges" />
-                        <Link to="/pythonchallenges">Python</Link>
-                        <Link to="/jschallenges">JavaScript</Link>
-                        <Challenge question="JS Question" answer="JS Answer" />
+                        <Link to="/pythonchallenges" className="codingLink">Python</Link>
+                        <Link to="/jschallenges" className="codingLink">JavaScript</Link>
+                        <Challenge question="Coming Soon!" answer="Coming Soon!" />
                     </Layout>
                     <footer className="page-footer">
                         <p>© {new Date().getFullYear()}, Built with ❤️️</p>

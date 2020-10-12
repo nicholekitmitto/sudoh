@@ -16,7 +16,9 @@ class Bio extends Component {
                         <h3>Work</h3>
                         <div className="grid">
                             <div className="line"></div>
-                            <div className="dot" style={{gridRow: 0,}}></div>
+                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
+                                <div className="dot dot--current"></div>
+                            </div>
                             <h4 className="title">
                                 CollegeNET
                             </h4>
@@ -43,13 +45,17 @@ class Bio extends Component {
                         <h3>Education/Certs</h3>
                         <div className="grid">
                         <div className="line"></div>
-                            <div className="dot" style={{gridRow: 0,}}></div>
+                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
+                                <div className="dot dot--current"></div>
+                            </div>
                             <h4 className="title">
                                 Security+
                             </h4>
                             <p className="last">In Progress</p>
 
-                            <div className="dot" style={{gridRow: 3,}}></div>
+                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
+                                <div className="dot dot--current"></div>
+                            </div>
                             <h4 className="title">
                                 LPIC-1
                             </h4>

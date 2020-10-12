@@ -34,8 +34,8 @@ const Pychallenges = ({ data, location, question }) => {
                     <Header />
                     <Layout location={location} title={siteTitle}>
                         <SEO title="Sudoh | Coding Challenges" />
-                        <Link to="/pythonchallenges">Python</Link>
-                        <Link to="/jschallenges">JavaScript</Link>
+                        <Link to="/pythonchallenges" className="codingLink">Python</Link>
+                        <Link to="/jschallenges" className="codingLink">JavaScript</Link>
                         <Challenge question={Python_insert_five} answer={Python_insert_five_answer} />
                     </Layout>
                     <footer className="page-footer">

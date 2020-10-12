@@ -137,13 +137,30 @@ $background: #100e17;
         }
 
         .dot {
-            width: 8px;
-            height: 8px;
+            width: .5em;
+            height: .5em;
             align-self: center;
             grid-column: 1 / auto;
-            background: rgb(157, 178, 201);
+            // background: rgb(157, 178, 201);
+            background: #ee83ef;
             border-radius: 100%;
+
+            &--current {
+                animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+                width: .75em;
+                height: .75em;
+                position: absolute;
+                left: -.15em;
+                top: -2px;
+            }
         }
+    }
+}
+
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
     }
 }
 
@@ -425,4 +442,10 @@ $background: #100e17;
             flex-direction: column;
         }
     }
+}
+
+
+.codingLink {
+    margin-right: 2em;
+    font-size: 1.5rem;
 }
