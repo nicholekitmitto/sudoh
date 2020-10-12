@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 
@@ -327,6 +327,7 @@ code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     padding: 1em 2em;
     border-radius: 5px;
+    max-height: auto;
 }
 
 .codeblock svg {
@@ -336,10 +337,24 @@ code {
     vertical-align: middle;
 }
 
+.codeblock .minimize {
+    position: relative;
+}
+
+.codeblock .minimize:hover {
+    cursor: pointer;
+}
+
 .codeblock .inline-block {
     display: inline-block;
     margin-left: 2em;
     vertical-align: super;
+}
+
+.codeblock.collapsed .result {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-out;
 }
 
 .ps1 {
@@ -372,7 +387,12 @@ code {
     line-height: inherit;
     color: rgb(128, 255, 234) !important;
     white-space: break-spaces;
+    max-height: 99em;
+    transition: all 1s ease-out;
     /* color: #fdfdfd;
     text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 6px #03edf975; */
 }
 
+.indented {
+    padding-left: 2em;
+}
