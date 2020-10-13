@@ -13,9 +13,9 @@ import { rhythm } from "../utils/typography"
 import { myContext } from "../components/provider";
 
 import {
-    Python_insert_five,
-    Python_insert_five_answer
-    } from "../components/pychallengecontent"
+    JS_running_sum,
+    JS_running_sum_answer
+    } from "../components/jschallengecontent"
 
 const Jschallenges = ({ data, location, question }) => {
     const siteTitle = data.site.siteMetadata.title
@@ -36,7 +36,7 @@ const Jschallenges = ({ data, location, question }) => {
                         <SEO title="Sudoh | Coding Challenges" />
                         <Link to="/pythonchallenges" className="codingLink">Python</Link>
                         <Link to="/jschallenges" className="codingLink">JavaScript</Link>
-                        <Challenge question="Coming Soon!" answer="Coming Soon!" />
+                        <Challenge question={JS_running_sum} answer={JS_running_sum_answer} />
                     </Layout>
                     <footer className="page-footer">
                         <p>© {new Date().getFullYear()}, Built with ❤️️</p>
