@@ -14,7 +14,9 @@ import { myContext } from "../components/provider";
 
 import {
     JS_running_sum,
-    JS_running_sum_answer
+    JS_running_sum_answer,
+    JS_greatest_candies,
+    JS_greatest_candies_answer
     } from "../components/jschallengecontent"
 
 const Jschallenges = ({ data, location, question }) => {
@@ -37,6 +39,7 @@ const Jschallenges = ({ data, location, question }) => {
                         <Link to="/pythonchallenges" className="codingLink">Python</Link>
                         <Link to="/jschallenges" className="codingLink">JavaScript</Link>
                         <Challenge question={JS_running_sum} answer={JS_running_sum_answer} />
+                        <Challenge question={JS_greatest_candies} answer={JS_greatest_candies_answer} />
                     </Layout>
                     <footer className="page-footer">
                         <p>© {new Date().getFullYear()}, Built with ❤️️</p>
