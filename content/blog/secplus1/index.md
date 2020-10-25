@@ -253,3 +253,129 @@ A `hypervisor` is the software that creates, runs, and manages the VMs.
 <span class="pink">- Application cell </span>virtualization or container virtualization runs services or applications within isolated application cells (or containers). Containers don’t host an entire OS, instead the host’s OS and kernel run the service or app within each of the containers.
 
 - Container virtualization uses fewer resources and can be more efficient than a system using a traditional Type II hypervisor virtualization. Containers MUST use the OS of the host though
+
+## <span class="result" id="securing-network-architecture">Securing Network Architecture</span>
+
+You can use virtualization as part of an overall secure network architecture. One of the primary benefits is that VMs can provide segregation, segmentation, and isolation of individual systems. One way of doing so is to disable the network interface card (`NIC`) in the VM. This prevents it from transmitting any data in or out of the VM.
+
+<span class="pink">- Snapshot</span> - provides you with a copy of the VM at a moment in time, which you can use as a backup. After taking a snapshot, the hypervisor keeps a record of all changes to the VM. Basically like checkpoints in games! Admins take a snapshot before doing any risky operation like applying patches or updates, testing security controls, and installing new applications. These don’t tend to cause problems, but occasionally they do. An admin can easily revert or roll back the system to a known good state with known good configuration using the snapshot.
+
+## <span class="result" id="vde">VDI/VDE and Non-Persistence</span>
+
+Just how you can virtualize servers, you can also virtualize desktops. In a Virtual Desktop Infrastructure (`VDI`) or a Virtual Desktop Environment (`VDE`), a user’s desktop OS runs as a VM on a server, this is beneficial if a user’s PC has limited hardware resources. 
+
+Some things to consider when running virtual desktops is whether or not they will support persistence or `non-persistence`. In a persistent VD, each user has a custom desktop image, they can customize it and save their data within the desktop. In a non-persistent VD, all users are served the same desktop. When a user accesses the remote server, they’re provided a desktop OS from a preconfigured snapshot. They can make changes as they’re using it, but it reverts to the original snapshot when they log off.
+
+## <span class="result" id="virt-risks">Risks Associated with Virtualization</span>
+
+<span class="pink">- VM Escape</span> - This is an attack that allows an attacker to access the host system from within the virtual system. In some situations, an attacker can run malicious code on the virtual system to be able to interact with the underlying hypervisor. They can also gain access to the host system, which is generally a physical server with elevated privileges, if they get to this point, they will also have access to any other virtual systems on that host.
+
+<span class="pink">- VM Sprawl</span> - This can occur when an organization has many VMs that aren’t managed properly. Let’s say your coworker is spinning up a VM to be able to test some new software, once they’re done they forget about the VM and leave it up and running. Down the line there may be a patch for the OS running on that VM, so IT tests and applies this patch to all of the *known* VMs. But because your coworker didn’t tell anyone about their VM, it’s unpatched and left vulnerable to attack. We also have to think about the additional load to a server if everyone and their gran are spinning up their own VMs, this consumes more system resources, which leads to the servers becoming slower and potentially crashing.
+
+<span class="pink">- Loss of Confidentiality</span> - every VM or virtual system is essentially just one or a collection of files. While this makes them easy to manage and move between physical servers, it also makes them easier to steal. Each VM contains the OS and data, just like a physical system would have both the OS and data on its physical drives. This could include confidential information like a database of financial documents or any proprietary data. Anyone within the company, or even an attacker, could simply make a copy of these files and take them home and launch on another physical server.
+
+## <span class="result" id="kali">✨ Kali ✨</span>
+
+Oh yeah! We’re at some of the fun stuff! Go ahead and download the latest kali iso from (here)[https://www.kali.org/downloads/] and be sure to double check the hash to ensure it wasn’t corrupted during download! Plus it’s good practice 😉 Choose your favorite VM, mine is Oracle VM VirtualBox. We’re going to go over a few command-line tools mentioned in the Security+ objectives that only run within Linux.
+
+#### <span id="switches">Switches</span>
+
+Almost every command has options available that you can call by using a switch. Windows command-line switches use a forward slash (/) or a dash (-). Linux commands use only a dash (-). One of the most useful Windows switches is the `help switch` which is identified with a question mark (?). You can append it to commands in order to get help on how to use them:
+
+    - ping -? Or ping /?
+    - ipconfig -? Or ipconfig /?
+    - netstat -? netstat /?
+
+Linux has a help feature as well, but it’s not with the ? switch, instead you can just type the command without any switch, or pipe (|) the word help. Or you can use the manpages, manual, for a command, this is typically `man` followed by the command.
+    - ping
+    - ping | help
+    - man ping
+
+Windows is generally not case-sensitive for its commands, but Linux most definitely is. In Linux, commands are typically all lowercase.
+
+#### <span id="ping">Ping</span>
+
+This is a super basic command and it’s widely used to test connectivity for remote systems… or also to check your own internet connection hehe. You can also use it to verify a system can resolve valid host names to IP addresses, test the NIC, and check the security of a network. 
+
+It works by sending Internet Control Message Protocol (ICMP) echo request packets. Remote systems then answer with their own ICMP echo reply packets and if you receive echo recipes, you can know that the remote system is operational. Try it out with `ping google.com`! This is an example of using ping to check name resolution. You can also ping any known IP addresses, press Ctrl+C to cancel the ping, otherwise it’ll forever be sending out packets! If you’re on Windows though, it’ll only send our 4 ICMP echo requests.
+
+#### <span id="firewalls">Firewalls</span>
+
+If your ping receives a reply from a system, you know the other system is operational and reachable. But what if you’re ghosted by that system instead? If your ping fails, it doesn’t necessarily mean the remote system is down, ping might show a “Reply Timed Out” error even if the system is up and functional.
+
+Many denial-of-service (`DoS`) attacks use ICMP to disrupt services on internet-based systems (if you play WoW or any other online game, you’re probably already painfully aware of this concept :( ) Because of this, firewalls commonly block ICMP traffic in order to protect systems and prevent these attacks from happening. You can double check this by going to the website you’re attempting to ping, and if it’s up (it’s operational with HTTP) but your ping command failed, this might be why!
+
+#### <span id="ipconfig">ipconfig, ifconfig, and ip</span>
+
+The `ipconfig` command (Internet Protocol configuration) shows the Transmission Control Protocol/Internet Protocol (`TCP/IP`) configuration for a system. This includes things such as a computer’s IP address, subnet mask, default gateway, MAC address, and the address of a DNS server. It also shows the configuration information for both wired and wireless NICs. It’s commonly used as the first step in troubleshooting network problems.
+
+Linux systems will use `ifconfig` (interface configuration) instead of ipconfig. It has a few extra features that ipconfig doesn’t have. You can use it to configure the NIC as well as listing the properties of the NIC. 
+
+Here are a few common commands, followed by their Linux variations (ifconfig), please look into them!
+
+    - ipconfig Linux: ifconfig
+    - ipconfig /all  Linux: ifconfig -a
+    - ipconfig /displaydns
+    - ipconfig /flushdns
+Linux unique commands:
+
+    - ifconfig eth0
+    - ifconfig eth0 promisc Disable promiscuous mode with: ifconfig eth0 -promisc
+    - ifconfig eth0 allmulti
+
+Normally, an NIC uses non-promiscuous mode and only processes packets that are assigned directly to its IP address. You can put it in promiscuous mode though and it will process all packets regardless of the assigned IP. This allows the protocol analyzer to capture all packets that reach the NIC.
+
+The ifconfig command was deprecated in 2009 in Debian-based distros of Linux, this means that you can still use it, but it’s discouraged, it’s part of a package that is no longer maintained. Instead you can use `ip`! It’s not quite the same, it can still display information and configure network interfaces, but it doesn’t use the same commands/switches or have quite the same abilities. For example, ip doesn’t have a command that allows you to enable promiscuous mode on an NIC.
+
+    - ip link show - shows the interfaces and some info on them
+    - ip link set eth0 up - enables a network interface
+    - ip -s link - shows statistics on the network interfaces
+
+#### <span id="netstat">Netstat</span>
+
+`netstat` is short for network statistics. It allows you to view statistics for TCP/IP protocols on a system. Many attacks establish connections from an infected computer to a remote computer, if you suspect this may be happening you can often identify the nefarious connections by using netstat.
+	
+<span class="pink">> netstat</span> - Displays a listing of all open TCP connections 
+
+<span class="pink">> netstat -a</span> - Displays a list of all TCP and User Datagram Protocol (`UDP`) ports that a system is listening on, as well as all open connections. You can use the port number listed to identify protocols, if you see an IP address followed by :80, it indicates the system is listening on the default port of 80 for HTTP (likely a web server)
+
+<span class="pink">> netstat -r</span> - Displays the routing table
+
+<span class="pink">> netstat -e</span> - Displays details on network statistics, like how many bytes the system sent and received.
+
+<span class="pink">> netstat -s</span> - Displays statistics of packets sent or received for specific protocols like IP, ICMP, TCP, and UDP
+
+<span class="pink">> netstat -n</span> - Displays addresses and port numbers in numerical order. Useful if you’re looking for information related to a specific IP or port.
+
+<span class="pink">> netstat -p *protocol*</span> - Shows statistics on a specific protocol like TCP or UDP. netstat -p tcp to show only TCP stats.
+
+You can combine a bunch of the switches for commands to perform multiple operations at once. 
+<span class="pink">> netstat -anp tcp</span> - This would show all ports that the system is listening on (-a), in numerical order (-n), for only the TCP protocol (-p tcp)
+
+Netstat displays the state of a connection, such as ESTABLISHED to indicate an active connection. Some more common states are:
+    
+    - LISTEN - system is waiting for a connection request
+    - CLOSE_WAIT - Waiting for a connection termination request
+    - TIME_WAIT 
+    - SYN_SENT - sent a TCP SYN (synchronize_ packet as first part of SYN-ACK handshake
+    - SYN_RECEIVED - sent a TCP SYN-ACK, waiting for ACK response to establish connection.
+
+#### <span id="tracert">Tracert/Traceroute</span>
+
+`tracert` lists the routers between two systems. Each router in this case, is referred to a `hop`. Tracert identifies the IP address and sometimes the host name of each hop as well as the round-trip times (`RTTs`) for each hop. Linux systems use `traceroute`. You can use it to identify faulty routers on the network. If ping fails to reach a distant server, you can use tracert/traceroute to identify where the traffic stops (where the hops fail, packets are being lost). You can also use it to see where the RTTs increase as traffic is routed around a faulty router. 
+In a security context, you can use it to identify modified paths. Say our users within an internal network generally access the internet directly by going through router 1, but an attacker has installed an unauthorized router between router 1 and the internet! We can use tracert/traceroute to see this. The attacker can use their router to capture all the traffic passing through with a protocol analyzer and be able to view any data sent in plain text.
+
+`tracert -d` the -d switch forces the command to not resolve IP addresses to host names, which allows it to finish faster.
+
+#### <span id="arp">Arp</span>
+Don’t confuse ARP with `arp`! ARP is the Address Resolution Protocol, it resolves IP addresses to MAC addresses and stores the result in the ARP cache. The `arp` command allows you to view and manipulate the ARP cache.
+
+    - arp - shows help on Windows
+    - arp - shows the ARP cache on Linux
+    - arp -a - shows the ARP cache on Windows
+    - arp -a [IP address] - displays the ARP cache entry for the IP address provided 
+
+
+## <span class="result" id="kali">🥳 Fin! 🎉</span>
+
+You've made it to the end of the first chapter of notes! Congrats! I hope you stick around for the next 10 chapters of my Security+ study guide! This was just a brief overview of a lot of topics we're going to delve more into in the coming posts, keep an eye out!
