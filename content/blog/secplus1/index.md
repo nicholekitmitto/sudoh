@@ -12,6 +12,8 @@ This is the first installment of a series I'll be writing for studying for the S
 
 Anyway, here we go!
 
+<section>
+
 ## <span class="result" id="basics">CIA and AAA</span>
 
 I want to begin here because it's absolutely fundamental to understand the concepts here before proceeding to methods and other concepts that protect and uphold CIA. 
@@ -30,6 +32,8 @@ I want to begin here because it's absolutely fundamental to understand the conce
 <span class="pink">- Authorization</span> - This goes hand-in-hand with authentication, it's generally what follows immediately after authentication, you are given access to the data. Say you are authenticated into your Twitter account, you are then authorized to tweet from that account. If you've ever worked in a fairly commercial building, you have an ID badge which authenticates you as a valid employee, after scanning it you are then authorized access to the rest of the building.
 
 <span class="pink">- Accounting</span> - We're not exactly talking about tracking finances here, but it's a good way to explain the concept! Accounting is just that, taking account or recording everything that has happened on our watch. Think about monitoring logs here. By making use of accounting, we're able to create a good baseline for what ~normal~ activity looks like within our systems.
+
+</section>
 
 
 ## <span class="result" id="use-case">Use Case</span>
