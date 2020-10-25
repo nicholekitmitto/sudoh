@@ -449,3 +449,7 @@ $background: #100e17;
     margin-right: 2em;
     font-size: 1.5rem;
 }
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: transparent;
+}
