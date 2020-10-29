@@ -15,6 +15,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const blogTitle = post.frontmatter.title
+  const hasSidebar = blogTitle.includes('Security+')
 
   return (
     <div>
@@ -24,11 +26,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <Background />
       <Hero />
       <Header />
+        <div className={`${hasSidebar ? "blog-post" : ""}`}>
       <Layout location={location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        {/* {hasSidebar &&
+          <h2>
+            You have unread messages.
+          </h2>
+        } */}
         <article>
           <header>
             <h1
@@ -84,6 +92,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </ul>
         </nav>
       </Layout>
+        </div>
       <footer className="page-footer">
         <p>© {new Date().getFullYear()}, Built with ❤️️</p>
       </footer>

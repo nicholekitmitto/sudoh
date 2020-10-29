@@ -5,7 +5,7 @@ const Background = () => {
       <div
         style={{
           position: "absolute",
-          bottom: "-2em",
+          bottom: "0",
           right: 0,
           width: "300px",
           height: "350px",

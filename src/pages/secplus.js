@@ -8,18 +8,10 @@ import Planetright from "../components/planetright"
 import Border from "../components/mobileborder"
 import Hero from "../components/hero"
 import SEO from "../components/seo"
-import Challenge from "../components/challenge"
 import { rhythm } from "../utils/typography"
 import { myContext } from "../components/provider";
 
-import {
-    JS_running_sum,
-    JS_running_sum_answer,
-    JS_greatest_candies,
-    JS_greatest_candies_answer
-    } from "../components/jschallengecontent"
-
-const Jschallenges = ({ data, location, question }) => {
+const Secplus = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
     
@@ -35,11 +27,14 @@ const Jschallenges = ({ data, location, question }) => {
                     <Hero />
                     <Header />
                     <Layout location={location} title={siteTitle}>
-                        <SEO title="Sudoh | Coding Challenges" />
-                        <Link to="/pythonchallenges" className="codingLink">Python</Link>
-                        <Link to="/jschallenges" className="codingLink">JavaScript</Link>
-                        <Challenge question={JS_running_sum} answer={JS_running_sum_answer} />
-                        <Challenge question={JS_greatest_candies} answer={JS_greatest_candies_answer} />
+                        <SEO title="Sudoh | Sec+ Study Guide" />
+
+                        <h1>Security+ Study Guide</h1>
+                        <p>Here you can find my personal study notes for the Security+ exam, I've modified my notes to fit more of a blog post style, and together all the chapters create a great in-depth study guide!</p>
+                        <p>Please don't take these notes as everything you'll need to pass the exam, they're just a guide! I highly encourage you to do your own research on these topics and any topics related to them or future objectives to ensure you have all the knowledge you need to pass the exam :)</p>
+                        <Link to="/secplus1/">
+                            Chapter 1 - Introduction to Security Basics
+                        </Link>
                     </Layout>
                     <footer className="page-footer">
                         <p>© {new Date().getFullYear()}, Built with ❤️️</p>
@@ -68,7 +63,7 @@ const Jschallenges = ({ data, location, question }) => {
 
 }
 
-export default Jschallenges
+export default Secplus
 
 export const pageQuery = graphql`
   query {
