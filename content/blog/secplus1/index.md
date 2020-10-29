@@ -4,6 +4,26 @@ date: "2020-10-23T22:12:03.284Z"
 description: "First chapter of my Security+ Study Guide"
 ---
 
+<div class="sidebar--wrapper">
+<div class="sidebar">
+    <a href="#basics">CIA and AAA</a>
+    <a href="#use-case">Use Case</a>
+    <a href="#confidentiality">Confidentiality</a>
+    <a href="#encryption">Encryption</a>
+    <a href="#access-controls">Access Controls</a>
+    <a href="#steganography">Steganography & Obfuscation</a>
+    <a href="#integrity">Integrity</a>
+    <a href="#digital-signatures">Digital Signatures</a>
+    <a href="#availability">Availability</a>
+    <a href="#resourcevssecurity">Resource vs Security Constraints</a>
+    <a href="#technical-controls">Technical Controls</a>
+    <a href="#administrative-controls">Administrative Controls</a>
+    <a href="#operational-controls">Operational Controls</a>
+    <a href="#hypervisors">Hypervisors</a>
+    <a href="#kali">Kali</a>
+</div>
+</div>
+
 ## Welcome!
 
 This is the first installment of a series I'll be writing for studying for the Security+ exam! Follow along with me in my 'explain it like I'm 5' notes on all the exam objectives! The intent of this series is to help you (and myself) review for the Security+ exam, please don't take these notes as an end-all, be-all. These are just a guide with mildly in-depth discussion of the exam objectives, I highly encourage you to take these notes as a framework for your own further study! Go read up more on everything in here, especially anything you find particularly interesting! (*ahem* steganography anyone?!)
@@ -12,7 +32,6 @@ This is the first installment of a series I'll be writing for studying for the S
 
 Anyway, here we go!
 
-<section>
 
 ## <span class="result" id="basics">CIA and AAA</span>
 
@@ -32,8 +51,6 @@ I want to begin here because it's absolutely fundamental to understand the conce
 <span class="pink">- Authorization</span> - This goes hand-in-hand with authentication, it's generally what follows immediately after authentication, you are given access to the data. Say you are authenticated into your Twitter account, you are then authorized to tweet from that account. If you've ever worked in a fairly commercial building, you have an ID badge which authenticates you as a valid employee, after scanning it you are then authorized access to the rest of the building.
 
 <span class="pink">- Accounting</span> - We're not exactly talking about tracking finances here, but it's a good way to explain the concept! Accounting is just that, taking account or recording everything that has happened on our watch. Think about monitoring logs here. By making use of accounting, we're able to create a good baseline for what ~normal~ activity looks like within our systems.
-
-</section>
 
 
 ## <span class="result" id="use-case">Use Case</span>
