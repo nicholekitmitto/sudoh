@@ -28,6 +28,15 @@ $background: #100e17;
     display: block;
 }
 
+.link-wrapper {
+    max-width: 450px;
+
+    a {
+        display: inline-block;
+        margin-bottom: 1em;
+    }
+}
+
 .header {
     display: flex;
     flex-direction: row;
