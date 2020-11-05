@@ -244,7 +244,7 @@ There are also networks that provide SSO capabilities, a user only needs to log 
 
 A `transitive trust` creates an indirect trust relationship… say what now? SSO is a form of `transitive` authentication, which allows users to access other services or systems as long as there is transitive trust. Each system trusts each other. Within an LDAP-based network, domains use transitive trust for SSO.
 
-![Transitive Trust Diagram](./transitive-trust.png)
+<a href="https://thecybersecurityman.com/2017/12/21/single-sign-on-sso-authentication/">![Transitive Trust Diagram](./transitive-trust.png)</a>
 
 There’s a two-way trust between the parent domain and the child domain. There is also a two-way trust between the parent domain and the Blogs child domain. There is not a direct trust link between the two child domains, however the *transitive* relationship creates a two-way trust between them
 
