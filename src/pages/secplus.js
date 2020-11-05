@@ -32,9 +32,14 @@ const Secplus = ({ data, location }) => {
                         <h1>Security+ Study Guide</h1>
                         <p>Here you can find my personal study notes for the Security+ exam, I've modified my notes to fit more of a blog post style, and together all the chapters create a great in-depth study guide!</p>
                         <p>Please don't take these notes as everything you'll need to pass the exam, they're just a guide! I highly encourage you to do your own research on these topics and any topics related to them or future objectives to ensure you have all the knowledge you need to pass the exam :)</p>
-                        <Link to="/secplus1/">
-                            Chapter 1 - Introduction to Security Basics
-                        </Link>
+                        <div className="link-wrapper">
+                          <Link to="/secplus1/" className="display-block">
+                              Chapter 1 - Introduction to Security Basics
+                          </Link>
+                          <Link to="/secplus2/" className="display-block">
+                              Chapter 2 - Identity and Access Management
+                          </Link>
+                        </div>
                     </Layout>
                     <footer className="page-footer">
                         <p>© {new Date().getFullYear()}, Built with ❤️️</p>
