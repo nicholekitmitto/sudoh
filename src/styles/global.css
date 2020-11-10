@@ -396,3 +396,7 @@ code {
 .indented {
     padding-left: 2em;
 }
+
+.gif-container img {
+    max-width: 50px;
+}

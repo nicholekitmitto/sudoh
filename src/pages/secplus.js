@@ -31,6 +31,7 @@ const Secplus = ({ data, location }) => {
 
                         <h1>Security+ Study Guide</h1>
                         <p>Here you can find my personal study notes for the Security+ exam, I've modified my notes to fit more of a blog post style, and together all the chapters create a great in-depth study guide!</p>
+                        <p>These notes were from reading through the Get Certified Get Ahead SY0-501. You can get your own copy of that book <a href="https://www.amazon.com/CompTIA-Security-Get-Certified-Ahead/dp/1939136059/" target="_blank">here</a>.</p>
                         <p>Please don't take these notes as everything you'll need to pass the exam, they're just a guide! I highly encourage you to do your own research on these topics and any topics related to them or future objectives to ensure you have all the knowledge you need to pass the exam :)</p>
                         <div className="link-wrapper">
                           <Link to="/secplus1/" className="display-block">
@@ -38,6 +39,9 @@ const Secplus = ({ data, location }) => {
                           </Link>
                           <Link to="/secplus2/" className="display-block">
                               Chapter 2 - Identity and Access Management
+                          </Link>
+                          <Link to="/secplus3/" className="display-block">
+                              Chapter 3 - Networking Basics and Security
                           </Link>
                         </div>
                     </Layout>
