@@ -41,7 +41,7 @@ const Secplus = ({ data, location }) => {
                               Chapter 2 - Identity and Access Management
                           </Link>
                           <Link to="/secplus3/" className="display-block">
-                              Chapter 2 - Networking Basics and Security
+                              Chapter 3 - Networking Basics and Security
                           </Link>
                         </div>
                     </Layout>
