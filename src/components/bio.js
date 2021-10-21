@@ -9,7 +9,7 @@ class Bio extends Component {
             <div className="bio">
                 <h2 className="colorful whoami">$ whoami</h2>
                 <p>Hiya! I'm Nichole, a <Sparkles>DevOps Engineer</Sparkles>.</p>
-                <p>I was most recently an IT Automation Engineer at Ginger, where I developed Python scripts to automate various processes such as the onboarding and offboarding pipelines. I'm currently looking for new opportunities to pursue my interest in DevOps, Automation, Python, or Cloud Engineering! If you have work in any of those areas, let me know!</p>
+                <p>I was most recently an IT Automation Engineer at Ginger, where I developed Python scripts to automate various processes such as the onboarding and offboarding pipelines. I also wrote some CDK to architect project infrastructure in the Cloud, but between you and me, I definitely prefer <Sparkles>Terraform</Sparkles>! I'm currently looking for new opportunities to pursue my interest in DevOps, Automation, Python, or Cloud Engineering! If you have work in any of those areas, let me know!</p>
                 <p>If you want to get in touch with me, buy me a coffee, talk about a potential job opportuntity, <a href="mailto:nicholedwight@gmail.com" className="colorful">give me a shout</a>! I'm now availble for any and all entry-level DevOps roles, if you or your company are looking to fill one of these roles, please reach out to me! I'd particularly like to work for a <Sparkles>kind</Sparkles> company on a <Sparkles>supportive</Sparkles> team that helps encourage growth in each other by sharing knowledge.</p>
 
                 <div className="info">
@@ -58,7 +58,7 @@ class Bio extends Component {
                                 <div className="dot dot--current"></div>
                             </div>
                             <h4 className="title">
-                                AWS Solutions Architect - Associates
+                                AWS Solutions Architect <br/>- Associates
                             </h4>
                             <p className="last">In Progress</p>
 
