@@ -24,26 +24,24 @@ class Bio extends Component {
                                 Ginger
                             </h4>
                             <p>IT Automation Engineer</p>
-                            <p>Jan 2021 - Oct 2021</p>
+                            <p class="last">Jan 2021 - Oct 2021</p>
 
                             <div className="line"></div>
-                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
-                                <div className="dot dot--current"></div>
-                            </div>
+                            <div className="dot" style={{gridRow: 4,}}></div>
                             <h4 className="title">
                                 CollegeNET
                             </h4>
                             <p>UI Engineer</p>
-                            <p>2018 - 2020</p>
+                            <p class="last">2018 - 2020</p>
 
-                            <div className="dot" style={{gridRow: 4,}}></div>
+                            <div className="dot" style={{gridRow: 7,}}></div>
                             <h4 className="title">
                                 Simpleweb
                             </h4>
                             <p>Developer</p>
                             <p className="last">2015 - 2016</p>
 
-                            <div className="dot" style={{gridRow: 7,}}></div>
+                            <div className="dot" style={{gridRow: 10,}}></div>
                             <h4 className="title">
                                 Picollecta
                             </h4>
@@ -64,7 +62,9 @@ class Bio extends Component {
                             </h4>
                             <p className="last">In Progress</p>
 
-                            <div className="dot" style={{gridRow: 5,}}></div>
+                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
+                                <div className="dot"></div>
+                            </div>
                             <h4 className="title">
                                 University of the <br/>West of England
                             </h4>
