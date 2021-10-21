@@ -71,9 +71,6 @@ class Header extends Component {
             <Link to="/blog/">Blog</Link>
             </li>
             <li>
-            <Link to="/secplus/">Security+ Study Guide</Link>
-            </li>
-            <li>
             <Link to="/codingchallenges/">Challenges</Link>
             </li>
           </ul>

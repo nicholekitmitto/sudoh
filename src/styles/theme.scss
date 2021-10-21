@@ -121,14 +121,13 @@ $background: #100e17;
         position: relative;
         display: grid;
         grid-template-columns: min-content 1fr;
-        grid-column-gap: 1ch;
+        grid-column-gap: 2ch;
 
         > * {
             grid-column: 2 / auto;
             margin: 0px;
         }
 
-        p:nth-of-type(2),
         .last {
             margin-bottom: 2rem;
         }
@@ -140,7 +139,7 @@ $background: #100e17;
             opacity: 0.2;
             margin-left: 2px;
             grid-column: 1 / auto;
-            grid-row: 1 / span 9;
+            grid-row: 1 / span 13;
             background: rgb(157, 178, 201);
             border-radius: 100px;
         }
