@@ -1,7 +1,7 @@
 ---
 title: Security+ Study Guide Ch. 3
 date: "2020-11-04T22:12:03.284Z"
-description: "Third chapter of my Security+ Study Guide"
+description: "Third chapter of my Security+ Study Guide. In this post we'll be talking about networking basics and some basic security measures to implement on your network"
 ---
 
 <div class="sidebar--wrapper">

@@ -8,14 +8,24 @@ class Bio extends Component {
         return (
             <div className="bio">
                 <h2 className="colorful whoami">$ whoami</h2>
-                <p>Hiya! I'm Nichole, a <Sparkles>digital privacy enthusiast</Sparkles>.</p>
-                <p>I was most recently the lead UI Engineer at CollegeNET, working on a class scheduling and event management application for universities nationwide. I've taken up an additional interest in cybersecurity and am now studying full-time for my certificates to be able to move into the information security realm professionally in the very near future. I'll be writing about the things I learn along my journey <Link to="/blog/" className="colorful">here</Link>, hopefully you may find something useful!</p>
-                <p>If you want to get in touch with me, buy me a coffee, talk about a potential job opportuntity, <a href="mailto:nicholedwight@gmail.com" className="colorful">give me a shout</a>! I'm now availble for any and all entry-level cybersecurity roles, if you or your company are looking to fill one of these roles, please reach out to me! I'd particularly like to work for a <Sparkles>kind</Sparkles> company on a <Sparkles>supportive</Sparkles> team that helps encourage growth in each other by sharing knowledge.</p>
+                <p>Hiya! I'm Nichole, a <Sparkles>DevOps Engineer</Sparkles>.</p>
+                <p>I was most recently an IT Automation Engineer at Ginger, where I developed Python scripts to automate various processes such as the onboarding and offboarding pipelines. I'm currently looking for new opportunities to pursue my interest in DevOps, Automation, Python, or Cloud Engineering! If you have work in any of those areas, let me know!</p>
+                <p>If you want to get in touch with me, buy me a coffee, talk about a potential job opportuntity, <a href="mailto:nicholedwight@gmail.com" className="colorful">give me a shout</a>! I'm now availble for any and all entry-level DevOps roles, if you or your company are looking to fill one of these roles, please reach out to me! I'd particularly like to work for a <Sparkles>kind</Sparkles> company on a <Sparkles>supportive</Sparkles> team that helps encourage growth in each other by sharing knowledge.</p>
 
                 <div className="info">
                     <section className="work">
                         <h3>Work</h3>
                         <div className="grid">
+                        <div className="line"></div>
+                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
+                                <div className="dot dot--current"></div>
+                            </div>
+                            <h4 className="title">
+                                Ginger
+                            </h4>
+                            <p>IT Automation Engineer</p>
+                            <p>Jan 2021 - Oct 2021</p>
+
                             <div className="line"></div>
                             <div className="dot" style={{gridRow: 0, position: "relative",}}>
                                 <div className="dot dot--current"></div>
@@ -24,7 +34,7 @@ class Bio extends Component {
                                 CollegeNET
                             </h4>
                             <p>UI Engineer</p>
-                            <p>2018 - current</p>
+                            <p>2018 - 2020</p>
 
                             <div className="dot" style={{gridRow: 4,}}></div>
                             <h4 className="title">
@@ -50,15 +60,7 @@ class Bio extends Component {
                                 <div className="dot dot--current"></div>
                             </div>
                             <h4 className="title">
-                                Security+
-                            </h4>
-                            <p className="last">In Progress</p>
-
-                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
-                                <div className="dot dot--current"></div>
-                            </div>
-                            <h4 className="title">
-                                LPIC-1
+                                AWS Solutions Architect - Associates
                             </h4>
                             <p className="last">In Progress</p>
 

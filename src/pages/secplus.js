@@ -43,6 +43,9 @@ const Secplus = ({ data, location }) => {
                           <Link to="/secplus3/" className="display-block">
                               Chapter 3 - Networking Basics and Security
                           </Link>
+                          <Link to="/secplus4/" className="display-block">
+                              Chapter 4 - Securing your Network
+                          </Link>
                         </div>
                     </Layout>
                     <footer className="page-footer">
