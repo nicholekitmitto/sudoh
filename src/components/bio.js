@@ -72,6 +72,38 @@ class Bio extends Component {
                             <p>2013 - 2017</p>
                         </div>
                     </section>
+
+                    <section className="volunteering">
+                        <h3>Volunteer Work</h3>
+                        <div className="grid">
+                        <div className="line"></div>
+                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
+                                <div className="dot dot--current"></div>
+                            </div>
+                            <h4 className="title">
+                                Animal Care
+                            </h4>
+                            <p>Humane Society of the <br/>Pikes Peak Region</p>
+                            <p className="last">2021 - current</p>
+
+                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
+                                <div className="dot"></div>
+                            </div>
+                            <h4 className="title">
+                                Dog Foster
+                            </h4>
+                            <p>MCACC Shelter</p>
+                            <p>2020 - 2021</p>
+                            <div className="dot" style={{gridRow: 0, position: "relative",}}>
+                                <div className="dot"></div>
+                            </div>
+                            <h4 className="title">
+                                Animal Care Volunteer
+                            </h4>
+                            <p>Odd Man Inn Animal Refuge</p>
+                            <p>2019 - 2020</p>
+                        </div>
+                    </section>
                 </div>
                 
             </div>
