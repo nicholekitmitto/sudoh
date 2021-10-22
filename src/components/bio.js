@@ -93,7 +93,7 @@ class Bio extends Component {
                                 Dog Foster
                             </h4>
                             <p>MCACC Shelter</p>
-                            <p>2020 - 2021</p>
+                            <p class="last">2020 - 2021</p>
                             <div className="dot" style={{gridRow: 0, position: "relative",}}>
                                 <div className="dot"></div>
                             </div>
